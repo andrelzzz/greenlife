@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-lg-4 col-lg-offset-4 well">
+    <h3 class="text-center">Edição de Senha</h3>
+
+    <% if resource.errors.any? %>
+      <div class="alert alert-danger alert-dismissable">
+        <%= resource.errors.full_messages.first %>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+    <% end %>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :password %> <i>(Deixe em branco de você não quiser mudar)</i><br />
+        <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :current_password %> <i>(Precisamos da sua senha atual para confirmar suas alterações)</i><br />
+        <%= f.password_field :current_password, autocomplete: 'off', class: 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Atualizar', class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home{
+  background-image: url("/home1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 10%;
+  margin-left: 0px;
+  margin-right: opx;
+  background-size: 100% 100%;
+}
+#newsfeed > h4 {
+  text-align: center;
+  padding: 10px;
+}
+
+#intro {
+  margin-top: 125px;
+  padding: 10px 50px;
+  text-align: center;
+  h1 {
+    color: #66BB6A;
+    font-weight: 300 !important;
+  }
+
+  p {
+    font-size: 1.65rem;
+    line-height: 3rem;
+  }
+}
+
+#img-preview {
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid $border-color;
+  img {
+    width: 35px;
+    height: 35px;
+  }
+}
